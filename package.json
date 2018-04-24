@@ -2,7 +2,7 @@
   "name": "akb-test-package",
   "version": "2.0.5",
   "bin": {
-    "akb": "./bin/mybin" //the path can also be jsfile  
+    "akb": "./bin/mybin"   
   },
   "description": "",
   "main": "index.js",
