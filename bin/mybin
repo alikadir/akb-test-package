@@ -7,12 +7,10 @@
 console.log("Hi! I'm binary command");
 
 const sample = require('../lib/mybin.js');
-sample.sampleFunc();
 
-console.log(
-  process.argv.find(function(item) {
-    let x = item.slice('=');
-    if (x.length > 1) console.log(sample.sampleFunc(x[1]));
-  })
-);
-
+process.argv.find(function(item) {
+  let x = item.split('=');
+  if (Array.isArray(x) && x.length > 1) {
+    console.log(`Square: ${sample.sampleFuncSquare(x[1])}`);
+  }
+});
