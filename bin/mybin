@@ -1,0 +1,18 @@
+#!/usr/bin/env node
+
+// this is a javascript file
+// this file is binaryfile with document first line (#!/usr/bin/env node)
+// you should call a js file with require in lib directory, however you write anything js command in this file
+
+console.log("Hi! I'm binary command");
+
+const sample = require('../lib/mybin.js');
+sample.sampleFunc();
+
+console.log(
+  process.argv.find(function(item) {
+    let x = item.slice('=');
+    if (x.length > 1) console.log(sample.sampleFunc(x[1]));
+  })
+);
+
