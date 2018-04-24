@@ -1,6 +1,9 @@
 {
   "name": "akb-test-package",
-  "version": "1.0.1",
+  "version": "2.0.0",
+  "bin": {
+    "akb": "./lib/mybin.js"
+  },
   "description": "",
   "main": "index.js",
   "scripts": {
